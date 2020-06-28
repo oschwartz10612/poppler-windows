@@ -4,7 +4,7 @@ The latest Poppler prebuilt-binaries packaged with dependencies. Built with the 
 
 ## Download
 
-You can download the latest build from [releases](https://github.com/oschwartz10612/poppler-windows/releases/).
+You can download the latest build from [releases](https://github.com/oschwartz10612/poppler-windows/releases/latest).
 
 ## Out of Date?
 
