@@ -13,6 +13,7 @@ cp $PKGS_PATH_DIR/libcurl*/Library/bin/libcurl.dll ./bin/
 cp $PKGS_PATH_DIR/openssl*/Library/bin/libcrypto-1_1-x64.dll ./bin/
 cp $PKGS_PATH_DIR/openjpeg*/Library/bin/openjp2.dll ./bin/
 cp $PKGS_PATH_DIR/xz*/Library/bin/liblzma.dll ./bin/
+cp $PKGS_PATH_DIR/cairo*/Library/bin/cairo.dll ./bin/
 
 ls ./bin/
 
