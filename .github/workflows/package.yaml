@@ -1,0 +1,48 @@
+name: Package For Windows
+
+on:
+  push:
+    tags:
+      - 'v*'
+      
+jobs:
+  package:
+    name: Package
+    runs-on: windows-latest
+    steps:
+    - name: Checkout Repo
+      uses: actions/checkout@master
+    - name: Setup Miniconda
+      uses: goanpeca/setup-miniconda@v1.6.0
+    - name: Install Poppler
+      shell: bash -l {0}
+      run: conda install -c conda-forge poppler -y
+    - name: Run Package Script
+      shell: bash -l {0}
+      run: ./package.sh
+      env:
+        POPPLER_VERSION: "0.89.0"
+        PKGS_PATH_DIR: /c/Users/runneradmin/conda_pkgs_dir
+    - name: Zip Release
+      run: Compress-Archive D:\a\poppler-windows\poppler-windows\poppler* release.zip
+      shell: pwsh
+    - name: Create Release
+      id: create_release
+      uses: actions/create-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        tag_name: ${{ github.ref }}
+        release_name: Release ${{ github.ref }}
+        draft: false
+        prerelease: false
+    - name: Upload Release Asset
+      id: upload-release-asset 
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        asset_path: D:\a\poppler-windows\poppler-windows\release.zip
+        asset_name: release.zip
+        asset_content_type: application/zip
