@@ -1,6 +1,6 @@
 # Poppler Packaged for Windows
 
-The latest Poppler prebuilt-binaries packaged with dependencies. Built with the help of conda-forge.
+The latest Poppler prebuilt-binaries packaged with dependencies for Windows. Built with the help of conda-forge and [poppler-feedstock](https://github.com/conda-forge/poppler-feedstock).
 
 ## Download
 
@@ -8,4 +8,4 @@ You can download the latest build from [releases](https://github.com/oschwartz10
 
 ## Out of Date?
 
-Create a new pull request and bump POPPLER_VERSION to the latest. Make sure to tag the release incrementing it properly.
+Create a new pull request and bump POPPLER_VERSION to the latest. Ensure that [poppler-feedstock](https://github.com/conda-forge/poppler-feedstock) is up to date. When merged I will bump the tag and a new release will be created.
