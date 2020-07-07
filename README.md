@@ -3,6 +3,7 @@
 The latest Poppler prebuilt-binaries packaged with dependencies for Windows. Built with the help of conda-forge and [poppler-feedstock](https://github.com/conda-forge/poppler-feedstock).
 
 ## Download
+![](https://github.com/oschwartz10612/poppler-windows/workflows/Package%20For%20Windows/badge.svg)
 
 You can download the latest build from [releases](https://github.com/oschwartz10612/poppler-windows/releases/latest).
 
