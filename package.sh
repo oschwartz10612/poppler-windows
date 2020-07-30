@@ -1,3 +1,5 @@
+POPPLER_VERSION=0.90.1
+
 mkdir "poppler-$POPPLER_VERSION"
 cd "poppler-$POPPLER_VERSION"
 

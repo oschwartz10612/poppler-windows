@@ -11,6 +11,6 @@ You can download the latest build from [releases](https://github.com/oschwartz10
 
 - Ensure that [poppler-feedstock](https://github.com/conda-forge/poppler-feedstock) is up to date. 
 
-- Create a new pull request and bump `POPPLER_VERSION` in `.github/workflows/package.yaml` to the latest.  
+- Create a new pull request and bump `POPPLER_VERSION` in `package.sh` to the latest.  
 
 - After merged the tag will be matched and the workflow will trigger a new release.

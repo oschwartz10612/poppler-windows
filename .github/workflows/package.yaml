@@ -21,7 +21,6 @@ jobs:
       shell: bash -l {0}
       run: ./package.sh
       env:
-        POPPLER_VERSION: "0.90.1"
         PKGS_PATH_DIR: /c/Users/runneradmin/conda_pkgs_dir
     - name: Zip Release
       run: Compress-Archive D:\a\poppler-windows\poppler-windows\poppler* release.zip
