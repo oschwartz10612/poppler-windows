@@ -23,7 +23,7 @@ jobs:
       env:
         PKGS_PATH_DIR: /c/Users/runneradmin/conda_pkgs_dir
     - name: Zip Release
-      run: Compress-Archive D:\a\poppler-windows\poppler-windows\poppler* release.zip
+      run: Compress-Archive D:\a\poppler-windows\poppler-windows\poppler-${{ env.POPPLER_VERSION }} Release-${{ env.POPPLER_VERSION }}.zip
       shell: pwsh
     - name: Create Release
       id: create_release
@@ -42,6 +42,6 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: D:\a\poppler-windows\poppler-windows\release.zip
-        asset_name: release.zip
+        asset_path: D:\a\poppler-windows\poppler-windows\Release-${{ env.POPPLER_VERSION }}.zip
+        asset_name: Release-${{ env.POPPLER_VERSION }}.zip
         asset_content_type: application/zip

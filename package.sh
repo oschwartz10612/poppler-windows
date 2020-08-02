@@ -17,5 +17,6 @@ cp $PKGS_PATH_DIR/openjpeg*/Library/bin/openjp2.dll ./bin/
 cp $PKGS_PATH_DIR/xz*/Library/bin/liblzma.dll ./bin/
 cp $PKGS_PATH_DIR/cairo*/Library/bin/cairo.dll ./bin/
 
-ls ./bin/
+echo "::set-env name=POPPLER_VERSION::$POPPLER_VERSION"
+
 
