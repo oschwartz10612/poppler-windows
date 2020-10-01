@@ -1,4 +1,4 @@
-Package for poppler v0.**.0
+Package for poppler v20.**.0
 
 # Checklist:
 
