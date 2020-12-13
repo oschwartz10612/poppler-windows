@@ -17,10 +17,6 @@ jobs:
     - name: Install Poppler
       shell: bash -l {0}
       run: conda install -c conda-forge poppler -y
-    - name: Download poppler data
-      uses: teddyking/dependency-action@master
-      with:
-        deps: https://poppler.freedesktop.org/poppler-20.12.1.tar.xz
     - name: Run Package Script
       shell: bash -l {0}
       run: ./package.sh
