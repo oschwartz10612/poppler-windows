@@ -17,6 +17,8 @@ You can download the latest build from [releases](https://github.com/oschwartz10
 
 ### Poppler-data out of date?
 
-- Create a new pull request and update the link under the action `Download poppler data` in `package.yaml`.  
+- Copy the latest download link for poppler-data from the [offical poppler site](https://poppler.freedesktop.org/).
+
+- Create a new pull request and update the `POPPLER_DATA_URL` under in `package.sh`.  
 
 - After merged the tag will be matched and the workflow will trigger a new release.
