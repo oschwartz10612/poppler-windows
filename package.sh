@@ -18,8 +18,9 @@ cp $PKGS_PATH_DIR/openjpeg*/Library/bin/openjp2.dll ./bin/
 cp $PKGS_PATH_DIR/xz*/Library/bin/liblzma.dll ./bin/
 cp $PKGS_PATH_DIR/cairo*/Library/bin/cairo.dll ./bin/
 
-cd ./share/
-mkdir poppler
+cd ./bin/
+mkdir share && cd share
+mkdir poppler && cd poppler
 curl $POPPLER_DATA_URL --output poppler-data.tar.gz
 tar xvzf poppler-data.tar.gz -C poppler --strip-components 1
 rm poppler-data.tar.gz
