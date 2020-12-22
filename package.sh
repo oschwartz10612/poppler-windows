@@ -1,4 +1,5 @@
 POPPLER_VERSION=20.12.1
+POPPLER_DATA_URL="https://poppler.freedesktop.org/poppler-data-0.4.10.tar.gz"
 
 mkdir "poppler-$POPPLER_VERSION"
 cd "poppler-$POPPLER_VERSION"
@@ -17,6 +18,10 @@ cp $PKGS_PATH_DIR/openjpeg*/Library/bin/openjp2.dll ./bin/
 cp $PKGS_PATH_DIR/xz*/Library/bin/liblzma.dll ./bin/
 cp $PKGS_PATH_DIR/cairo*/Library/bin/cairo.dll ./bin/
 
+cd ./share/
+mkdir poppler
+curl $POPPLER_DATA_URL --output poppler-data.tar.gz
+tar xvzf poppler-data.tar.gz -C poppler --strip-components 1
+rm poppler-data.tar.gz
+
 echo "POPPLER_VERSION=$POPPLER_VERSION" >> $GITHUB_ENV
-
-
