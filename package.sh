@@ -1,5 +1,5 @@
-POPPLER_VERSION=21.03.0
-POPPLER_DATA_URL="https://poppler.freedesktop.org/poppler-data-0.4.10.tar.gz"
+POPPLER_VERSION=21.08.0
+POPPLER_DATA_URL="https://poppler.freedesktop.org/poppler-21.08.0.tar.xz"
 
 mkdir "poppler-$POPPLER_VERSION"
 cd "poppler-$POPPLER_VERSION" || exit
