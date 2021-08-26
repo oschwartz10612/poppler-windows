@@ -2,6 +2,8 @@ name: Package For Windows
 
 on:
   push:
+    branches:
+      - master
     tags:
       - 'v*'
       

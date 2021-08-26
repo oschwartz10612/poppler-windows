@@ -1,0 +1,31 @@
+name: Package For Windows Test
+
+on:
+  pull_request:
+    types: [ synchronize ]
+      
+jobs:
+  package:
+    name: Package
+    runs-on: windows-latest
+    steps:
+    - name: Checkout Repo
+      uses: actions/checkout@master
+    - name: Setup Miniconda
+      uses: conda-incubator/setup-miniconda@v2
+    - name: Install Poppler
+      shell: bash -l {0}
+      run: conda install -c conda-forge poppler -y
+    - name: Run Package Script
+      shell: bash -l {0}
+      run: ./package.sh
+      env:
+        PKGS_PATH_DIR: /c/Users/runneradmin/conda_pkgs_dir
+    - name: Zip Release
+      run: Compress-Archive D:\a\poppler-windows\poppler-windows\poppler-${{ env.POPPLER_VERSION }} Release-${{ env.POPPLER_VERSION }}.zip
+      shell: pwsh
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: Poppler-${{ env.POPPLER_VERSION }}
+        path: D:\a\poppler-windows\poppler-windows\Release-${{ env.POPPLER_VERSION }}.zip

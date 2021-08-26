@@ -20,6 +20,7 @@ cp "$PKGS_PATH_DIR"/cairo*/Library/bin/cairo.dll ./Library/bin/
 cp "$PKGS_PATH_DIR"/libdeflate*/Library/bin/libdeflate.dll ./Library/bin/
 cp "$PKGS_PATH_DIR"/lerc*/Library/bin/Lerc.dll ./Library/bin/
 cp "$PKGS_PATH_DIR"/jbig*/Library/bin/jbig.dll ./Library/bin/
+cp "$PKGS_PATH_DIR"/lcms2*/Library/bin/lcms2.dll ./Library/bin/
 
 mkdir -p share/poppler
 cd share || exit
