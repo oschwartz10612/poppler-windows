@@ -21,6 +21,19 @@ jobs:
       run: ./package.sh
       env:
         PKGS_PATH_DIR: /c/Users/runneradmin/conda_pkgs_dir
+
+    - run: D:\a\poppler-windows\poppler-windows\poppler-${{ env.POPPLER_VERSION }}\Library\bin\pdfattach.exe
+    - run: D:\a\poppler-windows\poppler-windows\poppler-${{ env.POPPLER_VERSION }}\Library\bin\pdfdetach.exe
+    - run: D:\a\poppler-windows\poppler-windows\poppler-${{ env.POPPLER_VERSION }}\Library\bin\pdffonts.exe
+    - run: D:\a\poppler-windows\poppler-windows\poppler-${{ env.POPPLER_VERSION }}\Library\bin\pdfimages.exe
+    - run: D:\a\poppler-windows\poppler-windows\poppler-${{ env.POPPLER_VERSION }}\Library\bin\pdfinfo.exe
+    - run: D:\a\poppler-windows\poppler-windows\poppler-${{ env.POPPLER_VERSION }}\Library\bin\pdftocairo.exe
+    - run: D:\a\poppler-windows\poppler-windows\poppler-${{ env.POPPLER_VERSION }}\Library\bin\pdftohtml.exe
+    - run: D:\a\poppler-windows\poppler-windows\poppler-${{ env.POPPLER_VERSION }}\Library\bin\pdftoppm.exe
+    - run: D:\a\poppler-windows\poppler-windows\poppler-${{ env.POPPLER_VERSION }}\Library\bin\pdftops.exe
+    - run: D:\a\poppler-windows\poppler-windows\poppler-${{ env.POPPLER_VERSION }}\Library\bin\pdftotext.exe
+    - run: D:\a\poppler-windows\poppler-windows\poppler-${{ env.POPPLER_VERSION }}\Library\bin\pdfunite.exe
+
     - name: Zip Release
       run: Compress-Archive D:\a\poppler-windows\poppler-windows\poppler-${{ env.POPPLER_VERSION }} Release-${{ env.POPPLER_VERSION }}.zip
       shell: pwsh
