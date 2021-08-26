@@ -22,17 +22,28 @@ jobs:
       env:
         PKGS_PATH_DIR: /c/Users/runneradmin/conda_pkgs_dir
 
-    - run: D:\a\poppler-windows\poppler-windows\poppler-${{ env.POPPLER_VERSION }}\Library\bin\pdfattach.exe
-    - run: D:\a\poppler-windows\poppler-windows\poppler-${{ env.POPPLER_VERSION }}\Library\bin\pdfdetach.exe
-    - run: D:\a\poppler-windows\poppler-windows\poppler-${{ env.POPPLER_VERSION }}\Library\bin\pdffonts.exe
-    - run: D:\a\poppler-windows\poppler-windows\poppler-${{ env.POPPLER_VERSION }}\Library\bin\pdfimages.exe
-    - run: D:\a\poppler-windows\poppler-windows\poppler-${{ env.POPPLER_VERSION }}\Library\bin\pdfinfo.exe
-    - run: D:\a\poppler-windows\poppler-windows\poppler-${{ env.POPPLER_VERSION }}\Library\bin\pdftocairo.exe
-    - run: D:\a\poppler-windows\poppler-windows\poppler-${{ env.POPPLER_VERSION }}\Library\bin\pdftohtml.exe
-    - run: D:\a\poppler-windows\poppler-windows\poppler-${{ env.POPPLER_VERSION }}\Library\bin\pdftoppm.exe
-    - run: D:\a\poppler-windows\poppler-windows\poppler-${{ env.POPPLER_VERSION }}\Library\bin\pdftops.exe
-    - run: D:\a\poppler-windows\poppler-windows\poppler-${{ env.POPPLER_VERSION }}\Library\bin\pdftotext.exe
-    - run: D:\a\poppler-windows\poppler-windows\poppler-${{ env.POPPLER_VERSION }}\Library\bin\pdfunite.exe
+    - name: Test pdfattach
+      run: D:\a\poppler-windows\poppler-windows\poppler-${{ env.POPPLER_VERSION }}\Library\bin\pdfattach.exe --help
+    - name: Test pdfdetach
+      run: D:\a\poppler-windows\poppler-windows\poppler-${{ env.POPPLER_VERSION }}\Library\bin\pdfdetach.exe --help
+    - name: Test pdffonts
+      run: D:\a\poppler-windows\poppler-windows\poppler-${{ env.POPPLER_VERSION }}\Library\bin\pdffonts.exe --help
+    - name: Test pdfimages
+      run: D:\a\poppler-windows\poppler-windows\poppler-${{ env.POPPLER_VERSION }}\Library\bin\pdfimages.exe --help
+    - name: Test pdfinfo
+      run: D:\a\poppler-windows\poppler-windows\poppler-${{ env.POPPLER_VERSION }}\Library\bin\pdfinfo.exe --help
+    - name: Test pdftocairo
+      run: D:\a\poppler-windows\poppler-windows\poppler-${{ env.POPPLER_VERSION }}\Library\bin\pdftocairo.exe --help
+    - name: Test pdftohtml
+      run: D:\a\poppler-windows\poppler-windows\poppler-${{ env.POPPLER_VERSION }}\Library\bin\pdftohtml.exe --help
+    - name: Test pdftoppm
+      run: D:\a\poppler-windows\poppler-windows\poppler-${{ env.POPPLER_VERSION }}\Library\bin\pdftoppm.exe --help
+    - name: Test pdftops
+      run: D:\a\poppler-windows\poppler-windows\poppler-${{ env.POPPLER_VERSION }}\Library\bin\pdftops.exe --help
+    - name: Test pdftotext
+      run: D:\a\poppler-windows\poppler-windows\poppler-${{ env.POPPLER_VERSION }}\Library\bin\pdftotext.exe --help
+    - name: Test pdfunite
+      run: D:\a\poppler-windows\poppler-windows\poppler-${{ env.POPPLER_VERSION }}\Library\bin\pdfunite.exe --help
 
     - name: Zip Release
       run: Compress-Archive D:\a\poppler-windows\poppler-windows\poppler-${{ env.POPPLER_VERSION }} Release-${{ env.POPPLER_VERSION }}.zip
