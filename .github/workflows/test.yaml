@@ -1,4 +1,4 @@
-name: Package For Windows Test
+name: Package Test
 
 on:
   pull_request:
@@ -6,7 +6,7 @@ on:
       
 jobs:
   package:
-    name: Package
+    name: Test
     runs-on: windows-latest
     steps:
     - name: Checkout Repo

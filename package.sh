@@ -26,6 +26,8 @@ cp "$PKGS_PATH_DIR"/jbig*/Library/bin/jbig.dll ./Library/bin/
 cp "$PKGS_PATH_DIR"/lcms2*/Library/bin/lcms2.dll ./Library/bin/
 cp "$PKGS_PATH_DIR"/libxml2*/Library/bin/libxml2.dll ./Library/bin/
 
+rm -rf "$PKGS_PATH_DIR"
+
 mkdir -p share/poppler
 cd share || exit
 curl $POPPLER_DATA_URL --output poppler-data.tar.gz
