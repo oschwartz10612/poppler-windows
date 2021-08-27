@@ -1,6 +1,9 @@
 POPPLER_VERSION=21.08.0
 POPPLER_DATA_URL="https://poppler.freedesktop.org/poppler-data-0.4.10.tar.gz"
 
+set -e 
+set -o pipefail
+
 mkdir "poppler-$POPPLER_VERSION"
 cd "poppler-$POPPLER_VERSION" || exit
 
@@ -17,6 +20,14 @@ cp "$PKGS_PATH_DIR"/openssl*/Library/bin/libcrypto-1_1-x64.dll ./Library/bin/
 cp "$PKGS_PATH_DIR"/openjpeg*/Library/bin/openjp2.dll ./Library/bin/
 cp "$PKGS_PATH_DIR"/xz*/Library/bin/liblzma.dll ./Library/bin/
 cp "$PKGS_PATH_DIR"/cairo*/Library/bin/cairo.dll ./Library/bin/
+cp "$PKGS_PATH_DIR"/libdeflate*/Library/bin/libdeflate.dll ./Library/bin/
+cp "$PKGS_PATH_DIR"/lerc*/Library/bin/Lerc.dll ./Library/bin/
+cp "$PKGS_PATH_DIR"/jbig*/Library/bin/jbig.dll ./Library/bin/
+cp "$PKGS_PATH_DIR"/lcms2*/Library/bin/lcms2.dll ./Library/bin/
+cp "$PKGS_PATH_DIR"/libxml2*/Library/bin/libxml2.dll ./Library/bin/
+cp -a "$PKGS_PATH_DIR"/libiconv*/Library/bin/. ./Library/bin/
+
+rm -rf "$PKGS_PATH_DIR"
 
 mkdir -p share/poppler
 cd share || exit

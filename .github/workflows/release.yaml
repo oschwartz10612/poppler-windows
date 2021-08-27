@@ -2,12 +2,14 @@ name: Package For Windows
 
 on:
   push:
+    branches:
+      - master
     tags:
       - 'v*'
       
 jobs:
   package:
-    name: Package
+    name: Package Release
     runs-on: windows-latest
     steps:
     - name: Checkout Repo

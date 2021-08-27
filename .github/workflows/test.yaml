@@ -1,0 +1,55 @@
+name: Package Test
+
+on:
+  pull_request:
+    types: [ synchronize ]
+      
+jobs:
+  package:
+    name: Test
+    runs-on: windows-latest
+    steps:
+    - name: Checkout Repo
+      uses: actions/checkout@master
+    - name: Setup Miniconda
+      uses: conda-incubator/setup-miniconda@v2
+    - name: Install Poppler
+      shell: bash -l {0}
+      run: conda install -c conda-forge poppler -y
+    - name: Run Package Script
+      shell: bash -l {0}
+      run: ./package.sh
+      env:
+        PKGS_PATH_DIR: /c/Users/runneradmin/conda_pkgs_dir
+
+    - name: Test pdfattach
+      run: D:\a\poppler-windows\poppler-windows\poppler-${{ env.POPPLER_VERSION }}\Library\bin\pdfattach.exe D:\a\poppler-windows\poppler-windows\sample.pdf D:\a\poppler-windows\poppler-windows\sample.pdf test.pdf
+    - name: Test pdfdetach
+      run: D:\a\poppler-windows\poppler-windows\poppler-${{ env.POPPLER_VERSION }}\Library\bin\pdfdetach.exe -list D:\a\poppler-windows\poppler-windows\sample.pdf
+    - name: Test pdffonts
+      run: D:\a\poppler-windows\poppler-windows\poppler-${{ env.POPPLER_VERSION }}\Library\bin\pdffonts.exe -v
+    - name: Test pdfimages
+      run: D:\a\poppler-windows\poppler-windows\poppler-${{ env.POPPLER_VERSION }}\Library\bin\pdfimages.exe -v
+    - name: Test pdfinfo
+      run: D:\a\poppler-windows\poppler-windows\poppler-${{ env.POPPLER_VERSION }}\Library\bin\pdfinfo.exe -v
+    - name: Test pdftocairo
+      run: D:\a\poppler-windows\poppler-windows\poppler-${{ env.POPPLER_VERSION }}\Library\bin\pdftocairo.exe -v
+    - name: Test pdftohtml
+      run: D:\a\poppler-windows\poppler-windows\poppler-${{ env.POPPLER_VERSION }}\Library\bin\pdftohtml.exe -v
+    - name: Test pdftoppm
+      run: D:\a\poppler-windows\poppler-windows\poppler-${{ env.POPPLER_VERSION }}\Library\bin\pdftoppm.exe -v
+    - name: Test pdftops
+      run: D:\a\poppler-windows\poppler-windows\poppler-${{ env.POPPLER_VERSION }}\Library\bin\pdftops.exe -v
+    - name: Test pdftotext
+      run: D:\a\poppler-windows\poppler-windows\poppler-${{ env.POPPLER_VERSION }}\Library\bin\pdftotext.exe -v
+    - name: Test pdfunite
+      run: D:\a\poppler-windows\poppler-windows\poppler-${{ env.POPPLER_VERSION }}\Library\bin\pdfunite.exe -v
+
+    - name: Zip Release
+      run: Compress-Archive D:\a\poppler-windows\poppler-windows\poppler-${{ env.POPPLER_VERSION }} Release-${{ env.POPPLER_VERSION }}.zip
+      shell: pwsh
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: Poppler-${{ env.POPPLER_VERSION }}
+        path: D:\a\poppler-windows\poppler-windows\Release-${{ env.POPPLER_VERSION }}.zip
