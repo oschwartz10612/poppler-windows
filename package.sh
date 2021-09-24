@@ -1,7 +1,8 @@
 POPPLER_VERSION=21.09.0
 POPPLER_DATA_URL="https://poppler.freedesktop.org/poppler-data-0.4.11.tar.gz"
+BUILD="1"
 
-set -e 
+set -e
 set -o pipefail
 
 mkdir "poppler-$POPPLER_VERSION"
@@ -36,3 +37,4 @@ tar xvzf poppler-data.tar.gz -C poppler --strip-components 1
 rm poppler-data.tar.gz
 
 echo "POPPLER_VERSION=$POPPLER_VERSION" >> "$GITHUB_ENV"
+echo "BUILD=$BUILD" >> "$GITHUB_ENV"
