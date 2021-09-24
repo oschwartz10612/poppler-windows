@@ -13,12 +13,16 @@ You can download the latest build from [releases](https://github.com/oschwartz10
 
 - Create a new pull request and bump `POPPLER_VERSION` in `package.sh` to the latest.  
 
+- Sometimes the feedstock does an update on the same version in order to apply a fix and we need to do a repackage here. If the version has been packaged already, increase the build number by 1 in `package.sh`. If it has not been packaged yet, reset the build number to 0.
+
 - After merged the tag will be matched and the workflow will trigger a new release.
 
 ### Poppler-data out of date?
 
 - Copy the latest download link for poppler-data from the [offical poppler site](https://poppler.freedesktop.org/).
 
-- Create a new pull request and update the `POPPLER_DATA_URL` under in `package.sh`.  
+- Create a new pull request and update the `POPPLER_DATA_URL` under in `package.sh`. 
+
+- Sometimes the feedstock does an update on the same version in order to apply a fix and we need to do a repackage here. If the version has been packaged already, increase the build number by 1 in `package.sh`. If it has not been packaged yet, reset the build number to 0.
 
 - After merged the tag will be matched and the workflow will trigger a new release.
