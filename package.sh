@@ -1,6 +1,6 @@
 POPPLER_VERSION=21.10.0
 POPPLER_DATA_URL="https://poppler.freedesktop.org/poppler-data-0.4.11.tar.gz"
-BUILD="1"
+BUILD="0"
 
 set -e
 set -o pipefail
@@ -10,7 +10,7 @@ cd "poppler-$POPPLER_VERSION" || exit
 
 cp -a "$PKGS_PATH_DIR"/poppler-$POPPLER_VERSION*/Library/ .
 cp "$PKGS_PATH_DIR"/freetype*/Library/bin/freetype.dll ./Library/bin/
-cp "$PKGS_PATH_DIR"/zlib*/Library/bin/zlib.dll ./Library/bin/
+cp "$PKGS_PATH_DIR"/libzlib*/Library/bin/zlib.dll ./Library/bin/
 cp -a "$PKGS_PATH_DIR"/zstd*/Library/bin/. ./Library/bin/
 cp "$PKGS_PATH_DIR"/libtiff*/Library/bin/tiff.dll ./Library/bin/
 cp "$PKGS_PATH_DIR"/libtiff*/Library/bin/libtiff.dll ./Library/bin/
