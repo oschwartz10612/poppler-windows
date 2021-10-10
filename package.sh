@@ -17,7 +17,7 @@ cp "$PKGS_PATH_DIR"/libtiff*/Library/bin/libtiff.dll ./Library/bin/
 cp "$PKGS_PATH_DIR"/libssh2*/Library/bin/libssh2.dll ./Library/bin/
 cp "$PKGS_PATH_DIR"/libpng*/Library/bin/libpng16.dll ./Library/bin/
 cp "$PKGS_PATH_DIR"/libcurl*/Library/bin/libcurl.dll ./Library/bin/
-cp "$PKGS_PATH_DIR"/openssl*/Library/bin/libcrypto-1_1-x64.dll ./Library/bin/
+cp "$PKGS_PATH_DIR"/openssl*/Library/bin/libcrypto-3-x64.dll ./Library/bin/
 cp "$PKGS_PATH_DIR"/openjpeg*/Library/bin/openjp2.dll ./Library/bin/
 cp "$PKGS_PATH_DIR"/xz*/Library/bin/liblzma.dll ./Library/bin/
 cp "$PKGS_PATH_DIR"/cairo*/Library/bin/cairo.dll ./Library/bin/
