@@ -1,4 +1,4 @@
-POPPLER_VERSION=21.10.0
+POPPLER_VERSION=21.11.0
 POPPLER_DATA_URL="https://poppler.freedesktop.org/poppler-data-0.4.11.tar.gz"
 BUILD="0"
 
