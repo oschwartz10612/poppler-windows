@@ -27,7 +27,7 @@ jobs:
       shell: pwsh
     - name: Create tag
       id: tag_version
-      uses: mathieudutour/github-tag-action@v5.6
+      uses: mathieudutour/github-tag-action@v6.0
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         custom_tag: ${{ env.POPPLER_VERSION }}-${{ env.BUILD }}
