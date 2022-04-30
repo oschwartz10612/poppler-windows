@@ -22,6 +22,19 @@ jobs:
       env:
         PKGS_PATH_DIR: /c/Users/runneradmin/conda_pkgs_dir
 
+    - name: Zip Release
+      run: Compress-Archive D:\a\poppler-windows\poppler-windows\poppler-${{ env.POPPLER_VERSION }} Release-${{ env.POPPLER_VERSION }}-${{ env.BUILD }}.zip
+      shell: pwsh
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: Poppler-${{ env.POPPLER_VERSION }}-${{ env.BUILD }}
+        path: D:\a\poppler-windows\poppler-windows\Release-${{ env.POPPLER_VERSION }}-${{ env.BUILD }}.zip
+
+    - name: Remove Poppler
+      shell: bash -l {0}
+      run: conda remove -c conda-forge poppler -y
+
     - name: Test pdfattach
       run: D:\a\poppler-windows\poppler-windows\poppler-${{ env.POPPLER_VERSION }}\Library\bin\pdfattach.exe D:\a\poppler-windows\poppler-windows\sample.pdf D:\a\poppler-windows\poppler-windows\sample.pdf test.pdf
     - name: Test pdfdetach
@@ -44,12 +57,3 @@ jobs:
       run: D:\a\poppler-windows\poppler-windows\poppler-${{ env.POPPLER_VERSION }}\Library\bin\pdftotext.exe -v
     - name: Test pdfunite
       run: D:\a\poppler-windows\poppler-windows\poppler-${{ env.POPPLER_VERSION }}\Library\bin\pdfunite.exe -v
-
-    - name: Zip Release
-      run: Compress-Archive D:\a\poppler-windows\poppler-windows\poppler-${{ env.POPPLER_VERSION }} Release-${{ env.POPPLER_VERSION }}-${{ env.BUILD }}.zip
-      shell: pwsh
-    - name: Upload Artifact
-      uses: actions/upload-artifact@v2
-      with:
-        name: Poppler-${{ env.POPPLER_VERSION }}-${{ env.BUILD }}
-        path: D:\a\poppler-windows\poppler-windows\Release-${{ env.POPPLER_VERSION }}-${{ env.BUILD }}.zip
