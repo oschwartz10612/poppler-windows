@@ -26,6 +26,7 @@ cp "$PKGS_PATH_DIR"/lerc*/Library/bin/Lerc.dll ./Library/bin/
 cp "$PKGS_PATH_DIR"/jbig*/Library/bin/jbig.dll ./Library/bin/
 cp "$PKGS_PATH_DIR"/lcms2*/Library/bin/lcms2.dll ./Library/bin/
 cp "$PKGS_PATH_DIR"/fontconfig*/Library/bin/fontconfig-1.dll ./Library/bin/
+cp "$PKGS_PATH_DIR"/expat*/Library/bin/libexpat.dll ./Library/bin/
 cp -a "$PKGS_PATH_DIR"/libiconv*/Library/bin/. ./Library/bin/
 
 rm -rf "$PKGS_PATH_DIR"
