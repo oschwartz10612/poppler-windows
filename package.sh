@@ -1,4 +1,4 @@
-POPPLER_VERSION=22.04.0
+POPPLER_VERSION=22.11.0
 POPPLER_DATA_URL="https://poppler.freedesktop.org/poppler-data-0.4.11.tar.gz"
 BUILD="0"
 
@@ -23,7 +23,7 @@ cp "$PKGS_PATH_DIR"/xz*/Library/bin/liblzma.dll ./Library/bin/
 cp "$PKGS_PATH_DIR"/cairo*/Library/bin/cairo.dll ./Library/bin/
 cp "$PKGS_PATH_DIR"/libdeflate*/Library/bin/libdeflate.dll ./Library/bin/
 cp "$PKGS_PATH_DIR"/lerc*/Library/bin/Lerc.dll ./Library/bin/
-cp "$PKGS_PATH_DIR"/jbig*/Library/bin/jbig.dll ./Library/bin/
+# cp "$PKGS_PATH_DIR"/jbig*/Library/bin/jbig.dll ./Library/bin/
 cp "$PKGS_PATH_DIR"/lcms2*/Library/bin/lcms2.dll ./Library/bin/
 cp "$PKGS_PATH_DIR"/fontconfig*/Library/bin/fontconfig-1.dll ./Library/bin/
 cp "$PKGS_PATH_DIR"/expat*/Library/bin/libexpat.dll ./Library/bin/
