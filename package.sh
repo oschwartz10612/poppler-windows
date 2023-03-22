@@ -1,5 +1,5 @@
-POPPLER_VERSION=23.01.0
-POPPLER_DATA_URL="https://poppler.freedesktop.org/poppler-data-0.4.11.tar.gz"
+POPPLER_VERSION=23.03.0
+POPPLER_DATA_URL="https://poppler.freedesktop.org/poppler-data-0.4.12.tar.gz"
 BUILD="0"
 
 set -e
