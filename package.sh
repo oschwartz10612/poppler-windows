@@ -19,6 +19,7 @@ cp "$PKGS_PATH_DIR"/libpng*/Library/bin/libpng16.dll ./Library/bin/
 cp "$PKGS_PATH_DIR"/libcurl*/Library/bin/libcurl.dll ./Library/bin/
 cp "$PKGS_PATH_DIR"/openssl*/Library/bin/libcrypto-3-x64.dll ./Library/bin/
 cp "$PKGS_PATH_DIR"/openjpeg*/Library/bin/openjp2.dll ./Library/bin/
+cp "$PKGS_PATH_DIR"/libjpeg-turbo*/Library/bin/jpeg8.dll ./Library/bin/
 cp "$PKGS_PATH_DIR"/xz*/Library/bin/liblzma.dll ./Library/bin/
 cp "$PKGS_PATH_DIR"/cairo*/Library/bin/cairo.dll ./Library/bin/
 # cp "$PKGS_PATH_DIR"/libdeflate*/Library/bin/libdeflate.dll ./Library/bin/
