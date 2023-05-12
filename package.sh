@@ -1,5 +1,5 @@
-POPPLER_VERSION=23.01.0
-POPPLER_DATA_URL="https://poppler.freedesktop.org/poppler-data-0.4.11.tar.gz"
+POPPLER_VERSION=23.05.0
+POPPLER_DATA_URL="https://poppler.freedesktop.org/poppler-data-0.4.12.tar.gz"
 BUILD="0"
 
 set -e
@@ -19,6 +19,7 @@ cp "$PKGS_PATH_DIR"/libpng*/Library/bin/libpng16.dll ./Library/bin/
 cp "$PKGS_PATH_DIR"/libcurl*/Library/bin/libcurl.dll ./Library/bin/
 cp "$PKGS_PATH_DIR"/openssl*/Library/bin/libcrypto-3-x64.dll ./Library/bin/
 cp "$PKGS_PATH_DIR"/openjpeg*/Library/bin/openjp2.dll ./Library/bin/
+cp "$PKGS_PATH_DIR"/libjpeg-turbo*/Library/bin/jpeg8.dll ./Library/bin/
 cp "$PKGS_PATH_DIR"/xz*/Library/bin/liblzma.dll ./Library/bin/
 cp "$PKGS_PATH_DIR"/cairo*/Library/bin/cairo.dll ./Library/bin/
 # cp "$PKGS_PATH_DIR"/libdeflate*/Library/bin/libdeflate.dll ./Library/bin/
@@ -27,7 +28,9 @@ cp "$PKGS_PATH_DIR"/lerc*/Library/bin/Lerc.dll ./Library/bin/
 # cp "$PKGS_PATH_DIR"/jbig*/Library/bin/jbig.dll ./Library/bin/
 cp "$PKGS_PATH_DIR"/lcms2*/Library/bin/lcms2.dll ./Library/bin/
 cp "$PKGS_PATH_DIR"/fontconfig*/Library/bin/fontconfig-1.dll ./Library/bin/
-cp "$PKGS_PATH_DIR"/expat*/Library/bin/libexpat.dll ./Library/bin/
+# cp "$PKGS_PATH_DIR"/expat*/Library/bin/libexpat.dll ./Library/bin/
+cp "$PKGS_PATH_DIR"/expat*/Library/bin/expat.dll ./Library/bin/
+cp "$PKGS_PATH_DIR"/expat*/Library/bin/expat.dll ./Library/bin/libexpat.dll
 cp -a "$PKGS_PATH_DIR"/libiconv*/Library/bin/. ./Library/bin/
 
 rm -rf "$PKGS_PATH_DIR"
