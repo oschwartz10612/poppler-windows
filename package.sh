@@ -1,6 +1,6 @@
 POPPLER_VERSION=24.02.0
 POPPLER_DATA_URL="https://poppler.freedesktop.org/poppler-data-0.4.12.tar.gz"
-BUILD="0"
+BUILD="1"
 
 set -e
 set -o pipefail
