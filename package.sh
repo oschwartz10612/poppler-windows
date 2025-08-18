@@ -9,7 +9,7 @@ mkdir "poppler-$POPPLER_VERSION"
 cd "poppler-$POPPLER_VERSION" || exit
 
 cp -a "$PKGS_PATH_DIR"/poppler-$POPPLER_VERSION*/Library/ .
-cp "$PKGS_PATH_DIR"/libfreetype6*/Library/bin/libfreetype6.dll ./Library/bin/
+cp "$PKGS_PATH_DIR"/libfreetype6*/Library/bin/freetype.dll ./Library/bin/
 cp "$PKGS_PATH_DIR"/libzlib*/Library/bin/zlib.dll ./Library/bin/
 cp -a "$PKGS_PATH_DIR"/zstd*/Library/bin/. ./Library/bin/
 cp "$PKGS_PATH_DIR"/libtiff*/Library/bin/tiff.dll ./Library/bin/
