@@ -16,7 +16,7 @@ jobs:
       uses: conda-incubator/setup-miniconda@v3
     - name: Install Poppler
       shell: bash -l {0}
-      run: conda install -c conda-forge poppler -y
+      run: conda install -c conda-forge liblzma expat poppler -y
     - name: Run Package Script
       shell: bash -l {0}
       run: ./package.sh

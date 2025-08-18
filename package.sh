@@ -1,4 +1,4 @@
-POPPLER_VERSION=24.08.0
+POPPLER_VERSION=25.07.0
 POPPLER_DATA_URL="https://poppler.freedesktop.org/poppler-data-0.4.12.tar.gz"
 BUILD="0"
 
@@ -9,7 +9,7 @@ mkdir "poppler-$POPPLER_VERSION"
 cd "poppler-$POPPLER_VERSION" || exit
 
 cp -a "$PKGS_PATH_DIR"/poppler-$POPPLER_VERSION*/Library/ .
-cp "$PKGS_PATH_DIR"/freetype*/Library/bin/freetype.dll ./Library/bin/
+cp "$PKGS_PATH_DIR"/libfreetype6*/Library/bin/freetype.dll ./Library/bin/
 cp "$PKGS_PATH_DIR"/libzlib*/Library/bin/zlib.dll ./Library/bin/
 cp -a "$PKGS_PATH_DIR"/zstd*/Library/bin/. ./Library/bin/
 cp "$PKGS_PATH_DIR"/libtiff*/Library/bin/tiff.dll ./Library/bin/
@@ -20,7 +20,7 @@ cp "$PKGS_PATH_DIR"/libcurl*/Library/bin/libcurl.dll ./Library/bin/
 cp "$PKGS_PATH_DIR"/openssl*/Library/bin/libcrypto-3-x64.dll ./Library/bin/
 cp "$PKGS_PATH_DIR"/openjpeg*/Library/bin/openjp2.dll ./Library/bin/
 cp "$PKGS_PATH_DIR"/libjpeg-turbo*/Library/bin/jpeg8.dll ./Library/bin/
-cp "$PKGS_PATH_DIR"/xz*/Library/bin/liblzma.dll ./Library/bin/
+cp "$PKGS_PATH_DIR"/liblzma*/Library/bin/liblzma.dll ./Library/bin/
 cp "$PKGS_PATH_DIR"/cairo*/Library/bin/cairo.dll ./Library/bin/
 # cp "$PKGS_PATH_DIR"/libdeflate*/Library/bin/libdeflate.dll ./Library/bin/
 cp "$PKGS_PATH_DIR"/libdeflate*/Library/bin/deflate.dll ./Library/bin/
