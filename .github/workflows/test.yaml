@@ -26,7 +26,7 @@ jobs:
       run: Compress-Archive D:\a\poppler-windows\poppler-windows\poppler-${{ env.POPPLER_VERSION }} Release-${{ env.POPPLER_VERSION }}-${{ env.BUILD }}.zip
       shell: pwsh
     - name: Upload Artifact
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v5
       with:
         name: Poppler-${{ env.POPPLER_VERSION }}-${{ env.BUILD }}
         path: D:\a\poppler-windows\poppler-windows\Release-${{ env.POPPLER_VERSION }}-${{ env.BUILD }}.zip
