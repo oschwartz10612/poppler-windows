@@ -7,8 +7,14 @@ Download the latest Poppler prebuilt-binaries packaged with dependencies for Win
 
 You can download the latest build from [releases](https://github.com/oschwartz10612/poppler-windows/releases/latest).
 
+### Sponsored by Pangolin
+
+Pangolin is an open-source, identity-based remote access platform built on WireGuard® that enables secure, seamless connectivity to private and public resources. Pangolin combines reverse proxy and VPN capabilities into one platform, providing browser-based access to web applications and client-based access to any private resources with NAT traversal, all with granular access controls.
+
+https://github.com/fosrl/pangolin
+
 ## What is this?
-Please note that the purpose of this repository is solely to download the compiled Poppler binaries from conda-forge poppler-feedstock and put everything in a nice zip for use. This repository does not build Poppler. If you believe you have an issue with poppler itself - or the building of it - please direct those requests to the upstream sources with Poppler team or the guys over at [poppler-feedstock](https://github.com/conda-forge/poppler-feedstock).
+The purpose of this repository is solely to download the compiled Poppler binaries from conda-forge poppler-feedstock and put everything in a nice zip for use. This repository does not build Poppler. If you believe you have an issue with poppler itself - or the building of it - please direct those requests to the upstream sources with Poppler team or the guys over at [poppler-feedstock](https://github.com/conda-forge/poppler-feedstock).
 
 ## Out of Date?
 
