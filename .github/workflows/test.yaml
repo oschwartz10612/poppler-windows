@@ -12,7 +12,7 @@ jobs:
     - name: Checkout Repo
       uses: actions/checkout@master
     - name: Setup Miniconda
-      uses: conda-incubator/setup-miniconda@v3
+      uses: conda-incubator/setup-miniconda@v4
     - name: Install Poppler
       shell: bash -l {0}
       run: |
